@@ -1,0 +1,59 @@
+﻿@page
+@model RazorMSDNTest.Pages.RaXXzorMSDNTestArts.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>RazorMSDNTestArt</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RazorMSDNTestArt.Title" class="control-label"></label>
+                <input asp-for="RazorMSDNTestArt.Title" class="form-control" />
+                <span asp-validation-for="RazorMSDNTestArt.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RazorMSDNTestArt.Genre" class="control-label"></label>
+                <input asp-for="RazorMSDNTestArt.Genre" class="form-control" />
+                <span asp-validation-for="RazorMSDNTestArt.Genre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RazorMSDNTestArt.ProductionDate" class="control-label"></label>
+                <input asp-for="RazorMSDNTestArt.ProductionDate" class="form-control" />
+                <span asp-validation-for="RazorMSDNTestArt.ProductionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RazorMSDNTestArt.ZGPublishDate" class="control-label"></label>
+                <input asp-for="RazorMSDNTestArt.ZGPublishDate" class="form-control" />
+                <span asp-validation-for="RazorMSDNTestArt.ZGPublishDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RazorMSDNTestArt.Price" class="control-label"></label>
+                <input asp-for="RazorMSDNTestArt.Price" class="form-control" />
+                <span asp-validation-for="RazorMSDNTestArt.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="RazorMSDNTestArt.ForSale" /> @Html.DisplayNameFor(model => model.RazorMSDNTestArt.ForSale)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

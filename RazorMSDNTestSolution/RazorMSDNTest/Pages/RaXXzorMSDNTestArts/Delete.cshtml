@@ -1,0 +1,58 @@
+﻿@page
+@model RazorMSDNTest.Pages.RaXXzorMSDNTestArts.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>RazorMSDNTestArt</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RazorMSDNTestArt.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RazorMSDNTestArt.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RazorMSDNTestArt.Genre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RazorMSDNTestArt.Genre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RazorMSDNTestArt.ProductionDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RazorMSDNTestArt.ProductionDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RazorMSDNTestArt.ZGPublishDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RazorMSDNTestArt.ZGPublishDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RazorMSDNTestArt.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RazorMSDNTestArt.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RazorMSDNTestArt.ForSale)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RazorMSDNTestArt.ForSale)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="RazorMSDNTestArt.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
